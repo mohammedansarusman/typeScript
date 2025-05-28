@@ -1,0 +1,42 @@
+🚀 Leveling Up My TypeScript Game with Generics!
+Today I dove into TypeScript Generics and started understanding how they help keep my code both flexible and type-safe. Here's a little snippet I played with 👇
+
+type uDetails = {
+  name: string;
+  age: number;
+};
+
+type aDetails = {
+  fname: string;
+  role: string;
+};
+
+const userDetails: uDetails = {
+  name: "John",
+  age: 40,
+};
+
+const adminDetails: aDetails = {
+  fname: "Jeffry",
+  role: "admin",
+};
+
+function getDetails<T>(details: T): T {
+  return details;
+}
+
+const value1 = getDetails(userDetails);  // Hovering on value1 gives proper type suggestions!
+const value2 = getDetails(adminDetails); // Same here 🎯
+
+🧠 What I learned:
+
+By using generics (<T>), I can preserve the type of whatever is passed into getDetails.
+
+This helps avoid losing IntelliSense support and keeps my editor smart—like showing correct keys (name, age, fname, etc.) when I type value1. or value2.
+
+It also avoids unnecessary union types (uDetails | aDetails) when I already know the type going in.
+
+🛠️ This small tweak made a big difference. I'm loving how TypeScript helps me write better, safer, and more developer-friendly code.
+
+#TypeScript #Generics #LearningInPublic #FrontendDev #100DaysOfCode #WebDevelopment
+
