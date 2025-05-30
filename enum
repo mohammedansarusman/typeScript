@@ -1,0 +1,33 @@
+
+Approach 1
+
+enum statusType {
+    PENDING="pending",
+    COMPLETED="completed",
+    FAILED="failed",
+}
+
+function getStatus(orderId: string, status:statusType){
+    console.log(orderId+" "+status)
+}
+
+getStatus("12345",statusType.FAILED);
+
+Approach 2
+Below case pending will be 1 is declared and automaticaly 
+
+enum statusType {
+    PENDING="1"
+    COMPLETED,
+    FAILED,
+}
+
+function getStatus(orderId: string, status:statusType){
+    console.log(orderId+" "+status)
+}
+
+getStatus("12345",statusType.FAILED);
+
+
+
+
