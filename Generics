@@ -38,5 +38,55 @@ It also avoids unnecessary union types (uDetails | aDetails) when I already know
 
 🛠️ This small tweak made a big difference. I'm loving how TypeScript helps me write better, safer, and more developer-friendly code.
 
-#TypeScript #Generics #LearningInPublic #FrontendDev #100DaysOfCode #WebDevelopment
+_________________________________________________________________________________
+
+Here the aDetails have no name and age string. this methid will help to show the uDetails attributes in aDetails type
+
+type uDetails = {
+    name?:string;
+    age?:number;
+}
+
+type aDetails = uDetails &  {
+    role?:string;
+}
+
+let userDetails: uDetails = {
+    name:"Messi",
+    age:40,
+}
+
+let adminDetails: aDetails = {
+    name:"Carlose",
+    age:34,
+}
+
+_________________________________________________________________________________
+
+Here how the interface will work in same example
+
+interface uDetails {
+    name:string;
+    age:number;
+}
+
+interface aDetails extends uDetails   {
+    role?:string;
+}
+
+let userDetails: uDetails = {
+    name:"Messi",
+    age:40,
+}
+
+let adminDetails: aDetails = {
+    name:"Carlose",
+    age:34,
+}
+
+_________________________________________________________________________________
+
+
+
+
 
