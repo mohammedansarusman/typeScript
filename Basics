@@ -1,0 +1,41 @@
+Superset of javascript
+Detects error in code without running it
+Typescript needs to converted to JS to run
+The compilation process remove all the types
+
+No auto suggestions will not provide by JS so we can solve this issue using typescript. 
+( calling obejcts in a function )
+
+the typescript will install in dev dependency. the code is not required in production.
+
+------------------------------------------------------------------
+Infer Types  / Implicit types-  means the types automaticall infer by typescript
+------------------------------------------------------------------
+let userName = "Hello Typescript";
+userName = 10;
+
+let income = 100_000;
+income = "10000"
+
+error will detect in username & income automatically
+In javascript will not this error due to JS is weaked/looses type of language
+
+------------------------------------------------------------------
+Defining types / Explicit types
+------------------------------------------------------------------
+
+
+let userDetails: {name: string, age: number, place: string} = {
+    name:"Welcome",
+    age:40,
+    place:"Dubai",
+};
+
+userDetails.
+The above situation, we entered userDetails, TS automatically call the object keys.
+
+
+
+
+
+
