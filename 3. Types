@@ -1,0 +1,16 @@
+type Details = {
+    name:string;
+    age:number;
+    result:boolean;
+    getTest: ()=>void;
+}
+
+let userName: Details = {
+    name:"Hello typescript",
+    age:40,
+    result:false,
+    getTest(){
+        return this.name;
+    }
+}
+
