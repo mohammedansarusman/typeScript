@@ -1,0 +1,8 @@
+let userName = "debug" as const;
+// can't achge the value of userName
+userName="abc";
+
+
+let usrName = 10 as number; // only number is allowed
+let marks = "media" as string; // only string allowed
+let result = false as boolean; // only boolean allowed
