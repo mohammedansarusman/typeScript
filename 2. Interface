@@ -1,0 +1,38 @@
+--------------------------------------------------------
+Simple example for interface
+--------------------------------------------------------
+
+interface Details{
+    name:string;
+    age:number;
+    result:boolean;
+}
+
+let userName: Details = {
+    name:"Hello typescript",
+    age:40,
+    result:false,
+}
+
+--------------------------------------------------------
+another example, using two object same interface
+--------------------------------------------------------
+interface Details{
+    name:string;
+    age:number;
+    result:boolean;
+}
+
+let userName: Details = {
+    name:"Hello typescript",
+    age:40,
+    result:false,
+}
+
+let admDetails: Details = {
+    name:"Hello admin",
+    age:30,
+    result:true,
+}
+
+--------------------------------------------------------
