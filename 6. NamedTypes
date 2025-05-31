@@ -1,0 +1,7 @@
+//  Named types
+
+type StatusType = "pending" | "completed" | "failed1";
+type ToggleSwitch = "on" | "off";
+
+let state: StatusType ="failed1";
+let cats: ToggleSwitch = "on";
