@@ -1,0 +1,111 @@
+----------------------------------------------------------
+Functions
+----------------------------------------------------------
+
+type Details = {
+    name: string;
+    age: number|string;
+    result: boolean;
+    getTest : () => void;
+}
+
+let userName: Details = {
+    name: "Hello typescript",
+    age: "40",
+    result: false,
+    getTest(){
+        console.log(this.name)
+    }
+    
+}
+
+function getUserName(user: Details){
+    console.log(user.age, user.getTest)     // the advantage here, if we type user. then all the keys in object will pop-up automatically.
+}
+getUserName(userName)
+
+----------------------------------------------------------
+inline declartion of type
+----------------------------------------------------------
+
+
+function getUserName({name,age}:{name:string, age:number}){
+    return name && age;
+
+}
+getUserName({name:"ansar", age:40})
+
+----------------------------------------------------------
+return type in functions
+----------------------------------------------------------
+: number added with function means the number type will return. if the age is string then error pop-up.
+
+type Details = {
+    name:string;
+    age: number;
+    result: boolean;
+}
+
+let userDetails = {
+    name:"ansar",
+    age:40,
+    result:true,
+}
+
+function getUserDetails(user:Details): number{
+    return user.age;
+}
+getUserDetails(userDetails)
+
+----------------------------------------------------------
+return type in functions
+----------------------------------------------------------
+
+function getUserName({name,age}:{name:string, age:number}): (string | boolean | number)[]{
+  return [name,age];
+}
+getUserName({name:"ansar", age:40})
+
+----------------------------------------------------------
+if we stored the retun value/string in a variable ( eg: value1 ) if we write value1. , if value1 is string/number then methods will display.
+----------------------------------------------------------
+
+type Details = {
+    name:string;
+    age: number;
+    result: boolean;
+}
+
+let userDetails = {
+    name:"ansar",
+    age:40,
+    result:true,
+}
+
+function getUserDetails(user:Details): number{
+    return user.age;
+}
+let value1 = getUserDetails(userDetails);
+value1.
+
+----------------------------------------------------------
+VOID - In case no return from function then declare void
+----------------------------------------------------------
+type Details = {
+    name:string;
+    age: number;
+    result: boolean;
+}
+
+let userDetails = {
+    name:"ansar",
+    age:40,
+    result:true,
+}
+
+function getUserDetails(user:Details): void{
+    console.log(user.name);
+}
+
+
+
