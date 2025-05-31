@@ -62,8 +62,9 @@ let adminDetails: aDetails = {
 }
 
 _________________________________________________________________________________
-
 Here how the interface will work in same example
+_________________________________________________________________________________
+
 
 interface uDetails {
     name:string;
@@ -85,6 +86,35 @@ let adminDetails: aDetails = {
 }
 
 _________________________________________________________________________________
+type aDetails = uDetails;
+_________________________________________________________________________________
+
+type uDetails = {
+    name:string
+    course:string
+}
+
+type aDetails = uDetails;
+
+
+let userDetails: uDetails = {
+    name:"Ansar",
+    course:"React js",
+}
+let adminDetails: aDetails ={
+    name:"Hello",
+    course:"JS",
+}
+
+function getDetails<T>(details:T):T{
+    return details
+}
+
+let val1 = getDetails(adminDetails);
+let val2 = getDetails(userDetails)
+val1.course
+val2.course
+
 
 
 
