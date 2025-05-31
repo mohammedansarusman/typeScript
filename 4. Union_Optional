@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------------
+if multiple types coming for a attribute then we are using union operator.
+Here number and string has given for age attribe
+-------------------------------------------------------------------------------------
+
+type Details = {
+    name: string;
+    age: number|string;
+    result: boolean;
+    getTest : () => void;
+}
+
+let userName: Details = {
+    name: "Hello typescript",
+    age: "40",
+    result: false,
+    getTest(){
+        console.log(this.name)
+    }
+    
+}
+
+-------------------------------------------------------------------------------------
+number and string declared in skills
+let skills: (string | number | boolean)[] = ["HTML", "JS", "CSS", 100, 200, true]
+-------------------------------------------------------------------------------------
+
+
+Here notice the question mark in getTest function. if the question mark is added in TYPE then TS will not show error even the function is not added in useName object
+
+type Details = {
+    name: string;
+    age: number;
+    result: boolean;
+    getTest ?: () => void;
+}
+
+let userName: Details = {
+    name: "Hello typescript",
+    age: 40,
+    result: false,
+    getTest(){
+      console.log(this.name)
+    },
+    
+}
+
