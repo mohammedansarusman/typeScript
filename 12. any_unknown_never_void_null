@@ -1,0 +1,23 @@
+let user:string = "Welcome";
+user.
+
+here user. enter then all properties of string will pop-up.
+
+let user:any = "Welcome";
+user. 
+
+here all properties will not show. typescript doesn't know the type.
+
+--------------------------------------------------
+unknown
+--------------------------------------------------
+
+let user: unknown = "Welcome";
+let newValue = user as number;
+newValue="20";
+newValue=10;
+
+
+
+
+
