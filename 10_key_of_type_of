@@ -1,0 +1,10 @@
+const statusType = {
+    PENDING: "pending",
+    SUCCESS: "success",
+    FAILED: "failed",
+} as const;
+
+function getData(orderId: string, status: keyof typeof statusType) {
+    console.log(orderId + " " + statusType[status]);
+}
+getData("1234", "FAILED")
