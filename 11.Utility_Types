@@ -1,0 +1,146 @@
+---------------------------------------------------
+Exercise 1 - READONLY
+---------------------------------------------------
+
+type Details = {
+    readonly name:string;
+    age:number;
+} 
+const user:Details = {
+    name: "ansar",
+    age: 40,
+}
+
+user.name="hello";
+user.age=30;
+
+* Here user.name will show error because the readonly addded in Details type name.
+
+---------------------------------------------------
+Exercise 2 - READONLY
+---------------------------------------------------
+
+type Details = {
+    name:string;
+    age:number;
+} 
+const user: Readonly<Details> = {
+    name: "ansar",
+    age: 40,
+}
+
+user.name="hello";
+user.age=30;
+
+** here all attributes from user object can't change.
+
+---------------------------------------------------
+Exercise 3 - PARTIAL
+---------------------------------------------------
+
+
+type Details = {
+    name:string;
+    age:number;
+} 
+const user: Details= {
+
+}
+
+** Type '{}' is missing the following properties from type 'Details': name, age(2739)
+
+
+-------- solution ----------
+type Details = {
+    name:string;
+    age:number;
+} 
+const user: Partial<Details>= {
+
+}
+
+---------------------------------------------------
+Exercise 4 - Required
+---------------------------------------------------
+
+type Details = {
+    name:string;
+    age?:number;
+} 
+
+const user: Required<Details> = {
+    name:"hello"
+    
+}
+
+** the age is declared as optional. even it's optional some times it required then the 'Required' will use, otherwise error will pop-up.
+
+---------------------------------------------------
+Exercise 5 - Pick
+---------------------------------------------------
+
+type Details = {
+    name:string;
+    age:number;
+    result:boolean;
+} 
+
+const user: Pick<Details, "name" | "result" > = {
+    name:"Manu",
+    result:false,
+
+}
+** above solution, in Details types all attributes required. In some scenarion we need only two attributes like name & result then Pick will use
+
+---------------------------------------------------
+Exercise 5 - Omit
+---------------------------------------------------
+type Details = {
+    name:string;
+    age:number;
+    result:boolean;
+} 
+
+const user: Omit<Details, "result" > = {
+    name:"Manu",
+    age:30,
+
+}
+** In type have around 100 attributes, we need 97 attributes and omit 3, like that kind of scenarios the omit is useful.
+
+---------------------------------------------------
+Exercise 5 - Exclude
+---------------------------------------------------
+
+type StatusType = "pending" | "failed" | "success";
+
+const status:Exclude<StatusType,"pending"> = "success" 
+
+---------------------------------------------------
+Exercise 5 - Record
+---------------------------------------------------
+
+const food:Record<string,boolean|string> = {
+    name:"hello",
+    age:true,
+}
+
+** the Type key should be string and value should be boolean or string therwise error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
