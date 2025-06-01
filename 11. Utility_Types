@@ -127,6 +127,16 @@ const food:Record<string,boolean|string> = {
 
 ** the Type key should be string and value should be boolean or string therwise error.
 
+another way
+
+type Food = {
+    [index: string]: string;
+};
+
+const food: Food = {
+    name:"welcome",
+}
+
 
 
 
